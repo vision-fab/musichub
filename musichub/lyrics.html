@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - Lyrics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lyrics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/icons/logo-icon.png">
+</head>
+<body>
+    <!-- Lyrics Container -->
+    <div class="lyrics-container">
+        <!-- Song Header -->
+        <header class="lyrics-header">
+            <div class="container">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Songs
+                </a>
+                
+                <div class="song-info">
+                    <div class="song-cover">
+                        <img id="lyricsCover" src="" alt="Song Cover">
+                    </div>
+                    
+                    <div class="song-details">
+                        <h1 id="lyricsTitle">Song Title</h1>
+                        <p class="song-artist" id="lyricsArtist">Artist Name</p>
+                        
+                        <div class="song-meta">
+                            <span class="meta-item" id="lyricsGenre">
+                                <i class="fas fa-tag"></i> Genre
+                            </span>
+                            <span class="meta-item" id="lyricsRelease">
+                                <i class="far fa-calendar"></i> Release Date
+                            </span>
+                            <span class="meta-item" id="lyricsListeners">
+                                <i class="fas fa-headphones"></i> Listeners
+                            </span>
+                            <span class="meta-item" id="lyricsDuration">
+                                <i class="far fa-clock"></i> Duration
+                            </span>
+                        </div>
+                        
+                        <div class="song-actions">
+                            <button class="action-btn" id="favouriteBtn">
+                                <i class="far fa-heart"></i> Add to Favourites
+                            </button>
+                            <a href="#" class="action-btn spotify" id="spotifyBtn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-spotify"></i> Open in Spotify
+                            </a>
+                            <a href="#" class="action-btn youtube" id="youtubeBtn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-youtube"></i> Watch on YouTube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lyrics Content -->
+        <main class="lyrics-content">
+            <div class="container">
+                <!-- Lyrics Navigation -->
+                <div class="lyrics-nav">
+                    <button class="nav-btn active" data-section="lyrics">Lyrics</button>
+                    <button class="nav-btn" data-section="about">About the Song</button>
+                    <button class="nav-btn" data-section="artist">About the Artist</button>
+                </div>
+
+                <!-- Lyrics Sections -->
+                <div class="lyrics-sections">
+                    <!-- Lyrics Section -->
+                    <section class="lyrics-section active" id="lyricsSection">
+                        <div class="section-header">
+                            <h2>Lyrics</h2>
+                            <div class="lyrics-controls">
+                                <button class="control-btn" id="fontSizeDown">
+                                    <i class="fas fa-font"></i> <i class="fas fa-minus"></i>
+                                </button>
+                                <button class="control-btn" id="fontSizeUp">
+                                    <i class="fas fa-font"></i> <i class="fas fa-plus"></i>
+                                </button>
+                                <button class="control-btn" id="darkModeToggle">
+                                    <i class="fas fa-moon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="lyrics-text" id="lyricsText">
+                            <!-- Lyrics will be loaded here -->
+                            <p>Loading lyrics...</p>
+                        </div>
+                    </section>
+
+                    <!-- About Song Section -->
+                    <section class="lyrics-section" id="aboutSection">
+                        <h2>About This Song</h2>
+                        <div class="about-content">
+                            <p id="songDescription">Loading song description...</p>
+                            
+                            <div class="song-stats">
+                                <div class="stat">
+                                    <h4>Key</h4>
+                                    <p id="songKey">C Major</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>BPM</h4>
+                                    <p id="songBPM">120</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>Language</h4>
+                                    <p id="songLanguage">English</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>Explicit</h4>
+                                    <p id="songExplicit">No</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- About Artist Section -->
+                    <section class="lyrics-section" id="artistSection">
+                        <h2>About The Artist</h2>
+                        <div class="artist-content">
+                            <div class="artist-info">
+                                <div class="artist-avatar" id="artistAvatar"></div>
+                                <div>
+                                    <h3 id="artistName">Artist Name</h3>
+                                    <p class="artist-genre" id="artistGenre">Genre</p>
+                                </div>
+                            </div>
+                            
+                            <p id="artistBio">Loading artist biography...</p>
+                            
+                            <div class="artist-stats">
+                                <div class="artist-stat">
+                                    <i class="fas fa-music"></i>
+                                    <div>
+                                        <h4 id="artistSongs">0</h4>
+                                        <p>Songs</p>
+                                    </div>
+                                </div>
+                                <div class="artist-stat">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h4 id="artistFollowers">0</h4>
+                                        <p>Followers</p>
+                                    </div>
+                                </div>
+                                <div class="artist-stat">
+                                    <i class="fas fa-globe"></i>
+                                    <div>
+                                        <h4 id="artistOrigin">Country</h4>
+                                        <p>Origin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Lyrics Footer -->
+        <footer class="lyrics-footer">
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>&copy; 2023 MusicHub. Lyrics provided for educational purposes only.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/lyrics.js"></script>
+</body>
+</html>
