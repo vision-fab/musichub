@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - My Favourites</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/icons/logo-icon.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="MusicHub Logo" class="logo-img">
+                MusicHub
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="favourite.html" class="nav-link active">Favourites</a>
+                <div class="user-menu-container" id="userMenuContainer">
+                    <!-- Login button atau username akan dimasukkan oleh JavaScript -->
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="favourite.html" class="mobile-nav-link active">Favourites</a>
+        <div class="mobile-user-menu" id="mobileUserMenu">
+            <!-- Login button atau username mobile akan dimasukkan oleh JavaScript -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container main-container">
+        <!-- Header -->
+        <div class="favourites-header">
+            <h1 class="page-title">My Favourites</h1>
+            <p class="page-subtitle">Your personal collection of loved songs</p>
+            
+            <div class="favourites-stats">
+                <div class="favourite-stat">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <h3 id="favouriteCount">0</h3>
+                        <p>Songs</p>
+                    </div>
+                </div>
+                <div class="favourite-stat">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3 id="totalDuration">0</h3>
+                        <p>Minutes</p>
+                    </div>
+                </div>
+                <div class="favourite-stat">
+                    <i class="fas fa-layer-group"></i>
+                    <div>
+                        <h3 id="genreCount">0</h3>
+                        <p>Genres</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Favourites Grid -->
+        <section class="favourites-section">
+            <div class="favourites-actions">
+                <button class="action-btn secondary" id="clearAllBtn">
+                    <i class="fas fa-trash"></i> Clear All Favourites
+                </button>
+            </div>
+
+            <div class="favourites-grid" id="favouritesGrid">
+                <!-- Favourite songs will be loaded here -->
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-heart"></i>
+                    <h3>No Favourites Yet</h3>
+                    <p>Start adding songs to your favourites by clicking the heart icon on any song</p>
+                    <a href="index.html" class="btn-primary">Explore Songs</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">
+                    <img src="assets/images/logo.png" alt="MusicHub Logo" class="footer-logo">
+                    MusicHub
+                </h3>
+                <p class="footer-description">
+                    Discover, explore, and enjoy music like never before. Your personal music companion for finding new favorites and revisiting classics.
+                </p>
+                <div class="social-links">
+                    <div class="instagram-dropdown">
+                        <a href="#" class="social-link instagram-link" id="instagramLink">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <div class="instagram-dropdown-content" id="instagramDropdown">
+                            <a href="https://www.instagram.com/fbianysff_?igsh=OWliMzh4NjhpYnky" target="_blank" rel="noopener noreferrer">@fbianysff_</a>
+                            <a href="https://www.instagram.com/nrachmar04?igsh=MXc0dXN3dnNpMDJkcQ==" target="_blank" rel="noopener noreferrer">@nrachmar04</a>
+                            <a href="https://www.instagram.com/kiadmel_14?igsh=NGJpNGNibmliOXBr" target="_blank" rel="noopener noreferrer">@kiadmel_14</a>
+                            <a href="https://www.instagram.com/alfiadyaa?igsh=czRvNHIycjJoN3Vv" target="_blank" rel="noopener noreferrer">@alfiadyaa</a>
+                            <a href="https://www.instagram.com/kakadolken?igsh=Ym90N2V4Nm9qNjlh" target="_blank" rel="noopener noreferrer">@kakadolken</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="favourite.html">Favourites</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Contact Us</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> contact@musichub.com</li>
+                    <li><i class="fas fa-phone"></i> +62 811 2222 3333</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 MusicHub. All rights reserved. | Created with <i class="fas fa-heart"></i> for music lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="modal" id="logoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Confirm Logout</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to logout?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="logoutCancel">No</button>
+                <button class="btn-primary" id="logoutConfirm">Yes, Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Clear All Confirmation Modal -->
+    <div class="modal" id="clearAllModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Clear All Favourites</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to remove all songs from your favourites?</p>
+                <p class="warning-text"><i class="fas fa-exclamation-triangle"></i> This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="clearAllCancel">Cancel</button>
+                <button class="btn-danger" id="clearAllConfirm">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/favourite.js"></script>
+</body>
+</html>
